@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="main.css">
+    <script defer src="index.js"></script>
+    <title>Splitter</title>
+</head>
+<body>
+    <div class="container">
+        <div class="controls">
+            <form class="form">
+            <div class="bill">
+                <label for="bill">Bill</label>
+                <input type="number" id="bill">
+            </div>
+
+            <div class="tip">
+                <label>Select Tip %</label>
+                <div class="tip__buttons">
+                    <button class="btn btn-tip" data-percent="5">
+                        5%
+                    </button>
+                    <button class="btn btn-tip" data-percent="10">
+                        10%
+                    </button>
+                    <button class="btn btn-tip" data-percent="15">
+                        15%
+                    </button>
+                    <button class="btn btn-tip" data-percent="25">
+                        25%
+                    </button>
+                    <button class="btn btn-tip" data-percent="50">
+                        50%
+                    </button>
+                    <button class="btn btn-tip">
+                        Custom
+                    </button>
+                </div>
+            </div>
+
+            <div class="people">
+                <label for="people">Number of People</label>
+                <input type="number" id="people">
+                <span class="error">People can't be 0</span>
+            </div>
+            </form>
+        </div>
+        <div class="display">
+            <div class="amount">
+                <div class="amount__desc">
+                    <h4>Tip Amount</h4>
+                    <h5>/ person</h5>
+                </div>
+                <div class="amount__figure">
+                    <span class="dollar_sign">$</span>
+                    <span class="figure person-tip">4.27</span>
+                </div>
+            </div>
+            <div class="amount">
+                <div class="amount__desc">
+                    <h4>Total</h4>
+<!--                    <h5>/ person</h5>-->
+                </div>
+                <div class="amount__figure">
+                    <span class="dollar_sign">$</span>
+                    <span class="figure total-tip">32.79</span>
+                </div>
+            </div>
+
+            <button class="btn btn-big">Reset</button>
+        </div>
+    </div>
+</body>
+</html>

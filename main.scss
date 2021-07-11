@@ -1,0 +1,152 @@
+//Colors
+$color-primary: #C5E4E8;
+$color-secondary: #1C484B;
+$color-tertiary: #60C3AE;
+
+body {
+  margin: 0;
+  background-color: $color-primary;
+  height: 100vh;
+  display: grid;
+  place-content: center;
+  font-family: "JetBrains Mono";
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.container {
+  padding: 4rem;
+  display: grid;
+  height: 45rem;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2rem;
+  background-color: white;
+  border-radius: 3rem;
+
+  div {
+    border-radius: 2rem;
+  }
+}
+
+.controls {
+  padding: 3rem;
+}
+
+.form {
+  display: grid;
+  align-content: space-between;
+  height: 100%;
+}
+
+.display {
+  background-color: #1C484B;
+  //width: 45rem;
+  padding: 4rem;
+  width: 35rem;
+  //display: grid;
+  display: grid;
+  grid-template-rows: 20% 40% 1fr;
+}
+
+label {
+  color: $color-secondary;
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+input {
+  border: none;
+  outline: none;
+  height: 5rem;
+  text-align: right;
+  color: $color-secondary;
+  font-size: 3rem;
+  display: block;
+  border-radius: 1rem;
+  width: 100%;
+  background-color: rgba($color-primary, 0.3);
+  font-family: "JetBrains Mono";
+}
+
+.tip {
+
+  &__buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1.5rem;
+
+  }
+
+
+}
+
+.btn-tip.active {
+  background-color: $color-tertiary;
+  color: $color-secondary;
+}
+
+.btn-tip:last-child {
+  background-color: rgba($color-primary, 0.3);
+  color: $color-secondary;
+}
+
+.btn {
+  outline: none;
+  border: none;
+  height: 5rem;
+  border-radius: 1rem;
+  color: white;
+  font-size: 2rem;
+  background-color: $color-secondary;
+  font-family: "JetBrains Mono";
+  cursor: pointer;
+}
+
+.amount {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__desc {
+    h4 {
+      color: white;
+      font-size: 2rem;
+      margin: 0;
+    }
+
+    h5 {
+      color: $color-tertiary;
+      font-size: 1.3rem;
+      margin: 0;
+      margin-top: 5px;
+    }
+  }
+
+  &__figure {
+    .dollar_sign {
+      font-size: 3rem;
+      color: $color-tertiary;
+    }
+
+    .figure {
+      color: $color-tertiary;
+      font-size: 5rem;
+    }
+  }
+}
+
+.btn-big {
+  background-color: $color-tertiary;
+  width: 100%;
+  align-self: end;
+  color: $color-secondary;
+}
+
+.error {
+  color: red;
+  padding-top: 5px;
+  display: none;
+}
